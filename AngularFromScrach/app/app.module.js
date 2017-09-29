@@ -10,7 +10,8 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
-var address_component_1 = require("./address.component");
+var authors_component_1 = require("./components/authors.component");
+var authors_service_1 = require("./services/authors.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,7 +20,8 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, address_component_1.AddressComponent],
+        declarations: [app_component_1.AppComponent, authors_component_1.AuthorsComponent],
+        providers: [authors_service_1.AuthorsService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

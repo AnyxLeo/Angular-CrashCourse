@@ -10,19 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var forms_1 = require("@angular/forms");
-var AppComponent = (function () {
-    function AppComponent(_fb) {
-        this._fb = _fb;
+var authors_service_1 = require("../services/authors.service");
+var AuthorsComponent = (function () {
+    function AuthorsComponent(service) {
+        this.service = service;
+        this.authorsTotal = 0;
+        this.authors = service.GetAuthors();
+        this.authorsTotal = this.authors.length;
     }
-    return AppComponent;
+    return AuthorsComponent;
 }());
-AppComponent = __decorate([
+AuthorsComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: 'app/app.component.html',
+        selector: 'Authors',
+        template: "\n            <h2>{{authorsTotal}} Authors</h2>\n            <ul>\n                <li *ngFor=\"let author of authors\">{{author}}</li>\n            </ul>\n    "
     }),
-    __metadata("design:paramtypes", [forms_1.FormBuilder])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+    __metadata("design:paramtypes", [authors_service_1.AuthorsService])
+], AuthorsComponent);
+exports.AuthorsComponent = AuthorsComponent;
+//# sourceMappingURL=authors.component.js.map
