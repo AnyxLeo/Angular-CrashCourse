@@ -3,11 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { FavoriteComponent } from './components/favorite.component';
-
+import { TitleCasePipe } from './components/pipeTitleCase.pipe';
 @NgModule({
-  imports:      [ BrowserModule, ReactiveFormsModule ],
-  declarations: [AppComponent, FavoriteComponent],
+    imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent, TitleCasePipe],
   providers: [],
   bootstrap:    [ AppComponent ]
 })

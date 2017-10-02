@@ -7,16 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AuthorsService = (function () {
-    function AuthorsService() {
+var PipeTitleCaseComponent = (function () {
+    function PipeTitleCaseComponent() {
     }
-    AuthorsService.prototype.GetAuthors = function () {
-        return ["Author 1", "Author 2", "Author 3"];
-    };
-    return AuthorsService;
+    return PipeTitleCaseComponent;
 }());
-AuthorsService = __decorate([
-    core_1.Injectable()
-], AuthorsService);
-exports.AuthorsService = AuthorsService;
-//# sourceMappingURL=authors.service.js.map
+PipeTitleCaseComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        templateUrl: '',
+    })
+], PipeTitleCaseComponent);
+exports.PipeTitleCaseComponent = PipeTitleCaseComponent;
+//# sourceMappingURL=pipeTitleCase.component.js.map
