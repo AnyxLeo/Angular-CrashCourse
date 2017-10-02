@@ -3,13 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { AuthorsComponent } from './components/authors.component';
-import { AuthorsService } from './services/authors.service';
+import { FavoriteComponent } from './components/favorite.component';
 
 @NgModule({
   imports:      [ BrowserModule, ReactiveFormsModule ],
-  declarations: [AppComponent, AuthorsComponent],
-  providers: [AuthorsService],
+  declarations: [AppComponent, FavoriteComponent],
+  providers: [],
   bootstrap:    [ AppComponent ]
 })
 

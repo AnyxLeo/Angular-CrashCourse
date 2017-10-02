@@ -7,22 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var forms_1 = require("@angular/forms");
-var app_component_1 = require("./app.component");
-var favorite_component_1 = require("./components/favorite.component");
-var AppModule = (function () {
-    function AppModule() {
+var FavoriteComponent = (function () {
+    function FavoriteComponent() {
+        this.isFavorite = false;
     }
-    return AppModule;
+    FavoriteComponent.prototype.onClick = function () {
+        this.isFavorite = !this.isFavorite;
+    };
+    return FavoriteComponent;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, favorite_component_1.FavoriteComponent],
-        providers: [],
-        bootstrap: [app_component_1.AppComponent]
+FavoriteComponent = __decorate([
+    core_1.Component({
+        selector: 'favorite',
+        template: "<span class=\"glyphicon\"\n                [class.glyphicon-star]=\"isFavorite\"\n                [class.glyphicon-star-empty]=\"!isFavorite\"\n                (click)=\"onClick()\"\n                ></span>\n                "
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], FavoriteComponent);
+exports.FavoriteComponent = FavoriteComponent;
+//# sourceMappingURL=favorite.component.js.map

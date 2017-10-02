@@ -299,7 +299,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
-    <TypeScriptCompile Include="app\components\authors.component.ts" />
+    <TypeScriptCompile Include="app\components\favorite.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\services\authors.service.ts" />
   </ItemGroup>
