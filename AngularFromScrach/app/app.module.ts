@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TitleCasePipe } from './components/pipeTitleCase.pipe';
+import { LikeComponent } from './components/like.component';
 @NgModule({
     imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, TitleCasePipe],
+    declarations: [AppComponent, LikeComponent],
   providers: [],
   bootstrap:    [ AppComponent ]
 })

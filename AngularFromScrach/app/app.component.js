@@ -9,6 +9,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
+        this.tweet = {
+            body: 'Here is the body of a tweet...',
+            isLiked: true,
+            likesCount: 2
+        };
     }
     return AppComponent;
 }());

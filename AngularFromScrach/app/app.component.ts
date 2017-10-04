@@ -5,12 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: 'app/app.component.html',
 })
 export class AppComponent  {
-    title: string;
-    //onKeyup(event: string)
-    //{
-    //    this.title = event;
-    //}
-   
-
-   
+    tweet = {
+        body: 'Here is the body of a tweet...',
+        isLiked: true,
+        likesCount:2
+    }
 }

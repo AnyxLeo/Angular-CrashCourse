@@ -12,21 +12,27 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var LikeComponent = (function () {
     function LikeComponent() {
-        this.total = 10;
-        this.isLiked = false;
     }
-    LikeComponent.prototype.ToLike = function () {
-        this.isLiked ? this.total-- : this.total++;
-        this.isLiked == !this.isLiked;
+    LikeComponent.prototype.OnClick = function () {
+        this.isLiked = !this.isLiked;
+        this.totalLikes += this.isLiked ? 1 : -1;
     };
     return LikeComponent;
 }());
+__decorate([
+    core_1.Input('isLiked'),
+    __metadata("design:type", Boolean)
+], LikeComponent.prototype, "isLiked", void 0);
+__decorate([
+    core_1.Input('totalLikes'),
+    __metadata("design:type", Number)
+], LikeComponent.prototype, "totalLikes", void 0);
 LikeComponent = __decorate([
     core_1.Component({
-        selector: 'app',
-        template: "<i class=\"fa\" \n                [class.fa-thumbs-o-up]=!isLiked\n                [class.fa-thumbs-up]=isLiked\n                aria-hidden=\"true\" (click)=\"ToLike()\"></i> {{total}}"
-    }),
-    __metadata("design:paramtypes", [])
+        selector: 'like',
+        templateUrl: 'app/components/like.component.html',
+        styleUrls: ['app/components/like.component.css']
+    })
 ], LikeComponent);
 exports.LikeComponent = LikeComponent;
 //# sourceMappingURL=like.component.js.map
